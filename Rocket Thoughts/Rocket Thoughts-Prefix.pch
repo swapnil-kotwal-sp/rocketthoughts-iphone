@@ -14,4 +14,6 @@
 #import <CoreData/CoreData.h>
 #import "RootViewController.h"
 #import "Constants.h"
+#import "AppDelegate.h"
+#import "WebserviceHelperClass.h"
 #endif

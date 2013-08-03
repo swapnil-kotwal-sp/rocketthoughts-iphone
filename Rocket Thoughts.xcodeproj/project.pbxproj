@@ -45,6 +45,10 @@
 		2A99D54317AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53C17AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.m */; };
 		2A99D54817AD11CA003A50A7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D54617AD114C003A50A7 /* RootViewController.m */; };
 		2A99D54A17AD1208003A50A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A99D54917AD1208003A50A7 /* QuartzCore.framework */; };
+		2A99D54E17AD18AC003A50A7 /* images-9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2A99D54D17AD18AC003A50A7 /* images-9.jpeg */; };
+		2A99D55017AD18E1003A50A7 /* images-8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2A99D54F17AD18E1003A50A7 /* images-8.jpeg */; };
+		2A99D55417AD1B34003A50A7 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D55217AD1B33003A50A7 /* CategoryViewController.m */; };
+		2A99D55517AD1B34003A50A7 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A99D55317AD1B34003A50A7 /* CategoryViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +119,11 @@
 		2A99D54517AD114C003A50A7 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		2A99D54617AD114C003A50A7 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		2A99D54917AD1208003A50A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2A99D54D17AD18AC003A50A7 /* images-9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-9.jpeg"; sourceTree = "<group>"; };
+		2A99D54F17AD18E1003A50A7 /* images-8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-8.jpeg"; sourceTree = "<group>"; };
+		2A99D55117AD1B33003A50A7 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		2A99D55217AD1B33003A50A7 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		2A99D55317AD1B34003A50A7 /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +176,7 @@
 		219A614017ACF6E6002C657B /* Rocket Thoughts */ = {
 			isa = PBXGroup;
 			children = (
+				2A99D54B17AD16AB003A50A7 /* Resources */,
 				2A99D52C17AD10CC003A50A7 /* Core */,
 				2A99D54717AD118D003A50A7 /* Controller */,
 				2A99D52D17AD10DB003A50A7 /* Animtaion */,
@@ -307,8 +317,28 @@
 				219A615F17ACFF07002C657B /* ThoughtsListViewController.h */,
 				219A616017ACFF07002C657B /* ThoughtsListViewController.m */,
 				219A616117ACFF07002C657B /* ThoughtsListViewController.xib */,
+				2A99D55117AD1B33003A50A7 /* CategoryViewController.h */,
+				2A99D55217AD1B33003A50A7 /* CategoryViewController.m */,
+				2A99D55317AD1B34003A50A7 /* CategoryViewController.xib */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		2A99D54B17AD16AB003A50A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A99D54C17AD16B6003A50A7 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A99D54C17AD16B6003A50A7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2A99D54D17AD18AC003A50A7 /* images-9.jpeg */,
+				2A99D54F17AD18E1003A50A7 /* images-8.jpeg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +398,9 @@
 				219A615117ACF6E6002C657B /* Default-568h@2x.png in Resources */,
 				219A615E17ACF7B7002C657B /* LoginViewController.xib in Resources */,
 				219A616317ACFF07002C657B /* ThoughtsListViewController.xib in Resources */,
+				2A99D54E17AD18AC003A50A7 /* images-9.jpeg in Resources */,
+				2A99D55017AD18E1003A50A7 /* images-8.jpeg in Resources */,
+				2A99D55517AD1B34003A50A7 /* CategoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +437,7 @@
 				2A99D54117AD10ED003A50A7 /* RESideMenuCell.m in Sources */,
 				2A99D54217AD10ED003A50A7 /* RESideMenuItem.m in Sources */,
 				2A99D54317AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.m in Sources */,
+				2A99D55417AD1B34003A50A7 /* CategoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +518,7 @@
 				GCC_PREFIX_HEADER = "Rocket Thoughts/Rocket Thoughts-Prefix.pch";
 				INFOPLIST_FILE = "Rocket Thoughts/Rocket Thoughts-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wno-deprecated-declarations";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -495,6 +530,7 @@
 				GCC_PREFIX_HEADER = "Rocket Thoughts/Rocket Thoughts-Prefix.pch";
 				INFOPLIST_FILE = "Rocket Thoughts/Rocket Thoughts-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wno-deprecated-declarations";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,7 +7,9 @@
 //
 
 #import "RootViewController.h"
-#import "AppDelegate.h"
+#import "ThoughtsListViewController.h"
+#import "CategoryViewController.h"
+
 
 @interface RootViewController ()
 
@@ -26,21 +28,39 @@
 
 - (void)showMenu {
     if (!_sideMenu) {
+        
         RESideMenuItem *thoughtItem = [[RESideMenuItem alloc] initWithTitle:@"Thoughts" action:^(RESideMenu *menu, RESideMenuItem *item) {
-           
+            
+//            NSArray *controllers = self.navigationController.viewControllers;
+//            for (id controller in controllers) {
+//                // iterate through the array and check for your controller
+//                if ([controller isKindOfClass:[ThoughtsListViewController class]])
+//                {
+//                    [self.navigationController popViewControllerAnimated:YES];
+//                }
+//            }
+
+            [menu hide];
+            ThoughtsListViewController *thought = [[ThoughtsListViewController alloc]initWithNibName:@"ThoughtsListViewController" bundle:nil];
+            [self.navigationController pushViewController:thought animated:YES];
         }];
         
         RESideMenuItem *settingItem = [[RESideMenuItem alloc] initWithTitle:@"Settings" action:^(RESideMenu *menu, RESideMenuItem *item) {
 
         }];
+        
         RESideMenuItem *categoryItem = [[RESideMenuItem alloc] initWithTitle:@"Categories" action:^(RESideMenu *menu, RESideMenuItem *item) {
-
+            [menu hide];
+            CategoryViewController *catogory = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController" bundle:nil];
+            [self.navigationController pushViewController:catogory animated:YES];
         }];
+        
         RESideMenuItem *aboutUsItem = [[RESideMenuItem alloc] initWithTitle:@"About Us" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            [menu hide];
+        
         }];
+        
         RESideMenuItem *conatctItem = [[RESideMenuItem alloc] initWithTitle:@"Contact" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            [menu hide];
+        
         }];
         
         _sideMenu = [[RESideMenu alloc] initWithItems:@[thoughtItem, settingItem, categoryItem, aboutUsItem,conatctItem]];

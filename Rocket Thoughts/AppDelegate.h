@@ -20,4 +20,5 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 + (NSInteger)OSVersion;
++ (BOOL)presenceOfViewInNavigation:(UIViewController *)viewController;
 @end
