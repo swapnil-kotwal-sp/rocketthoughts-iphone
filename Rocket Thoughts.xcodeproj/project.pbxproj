@@ -36,6 +36,7 @@
 		219A619017AD027D002C657B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219A618F17AD027D002C657B /* SystemConfiguration.framework */; };
 		219A619417AD02E0002C657B /* WebserviceHelperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A619317AD02E0002C657B /* WebserviceHelperClass.m */; };
 		219A619817AD034F002C657B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A619717AD034F002C657B /* MBProgressHUD.m */; };
+		219A619A17AD1AFE002C657B /* ThoughtListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219A619917AD1AFE002C657B /* ThoughtListTableCell.xib */; };
 		2A99D53D17AD10ED003A50A7 /* AccelerationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53017AD10ED003A50A7 /* AccelerationAnimation.m */; };
 		2A99D53E17AD10ED003A50A7 /* Evaluate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53217AD10ED003A50A7 /* Evaluate.m */; };
 		2A99D53F17AD10ED003A50A7 /* REBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53417AD10ED003A50A7 /* REBackgroundView.m */; };
@@ -97,6 +98,7 @@
 		219A619317AD02E0002C657B /* WebserviceHelperClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceHelperClass.m; sourceTree = "<group>"; };
 		219A619617AD034F002C657B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		219A619717AD034F002C657B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		219A619917AD1AFE002C657B /* ThoughtListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThoughtListTableCell.xib; sourceTree = "<group>"; };
 		2A99D52F17AD10ED003A50A7 /* AccelerationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerationAnimation.h; sourceTree = "<group>"; };
 		2A99D53017AD10ED003A50A7 /* AccelerationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerationAnimation.m; sourceTree = "<group>"; };
 		2A99D53117AD10ED003A50A7 /* Evaluate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluate.h; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				219A615F17ACFF07002C657B /* ThoughtsListViewController.h */,
 				219A616017ACFF07002C657B /* ThoughtsListViewController.m */,
 				219A616117ACFF07002C657B /* ThoughtsListViewController.xib */,
+				219A619917AD1AFE002C657B /* ThoughtListTableCell.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				219A615117ACF6E6002C657B /* Default-568h@2x.png in Resources */,
 				219A615E17ACF7B7002C657B /* LoginViewController.xib in Resources */,
 				219A616317ACFF07002C657B /* ThoughtsListViewController.xib in Resources */,
+				219A619A17AD1AFE002C657B /* ThoughtListTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
