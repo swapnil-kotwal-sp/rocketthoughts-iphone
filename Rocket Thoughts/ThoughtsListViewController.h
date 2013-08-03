@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThoughtsListViewController : UIViewController
+@interface ThoughtsListViewController : RootViewController
 
 @end

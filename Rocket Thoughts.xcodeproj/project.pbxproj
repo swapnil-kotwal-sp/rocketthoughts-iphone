@@ -36,6 +36,15 @@
 		219A619017AD027D002C657B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219A618F17AD027D002C657B /* SystemConfiguration.framework */; };
 		219A619417AD02E0002C657B /* WebserviceHelperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A619317AD02E0002C657B /* WebserviceHelperClass.m */; };
 		219A619817AD034F002C657B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A619717AD034F002C657B /* MBProgressHUD.m */; };
+		2A99D53D17AD10ED003A50A7 /* AccelerationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53017AD10ED003A50A7 /* AccelerationAnimation.m */; };
+		2A99D53E17AD10ED003A50A7 /* Evaluate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53217AD10ED003A50A7 /* Evaluate.m */; };
+		2A99D53F17AD10ED003A50A7 /* REBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53417AD10ED003A50A7 /* REBackgroundView.m */; };
+		2A99D54017AD10ED003A50A7 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53617AD10ED003A50A7 /* RESideMenu.m */; };
+		2A99D54117AD10ED003A50A7 /* RESideMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53817AD10ED003A50A7 /* RESideMenuCell.m */; };
+		2A99D54217AD10ED003A50A7 /* RESideMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53A17AD10ED003A50A7 /* RESideMenuItem.m */; };
+		2A99D54317AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53C17AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.m */; };
+		2A99D54817AD11CA003A50A7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D54617AD114C003A50A7 /* RootViewController.m */; };
+		2A99D54A17AD1208003A50A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A99D54917AD1208003A50A7 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +97,24 @@
 		219A619317AD02E0002C657B /* WebserviceHelperClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceHelperClass.m; sourceTree = "<group>"; };
 		219A619617AD034F002C657B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		219A619717AD034F002C657B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2A99D52F17AD10ED003A50A7 /* AccelerationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerationAnimation.h; sourceTree = "<group>"; };
+		2A99D53017AD10ED003A50A7 /* AccelerationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerationAnimation.m; sourceTree = "<group>"; };
+		2A99D53117AD10ED003A50A7 /* Evaluate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluate.h; sourceTree = "<group>"; };
+		2A99D53217AD10ED003A50A7 /* Evaluate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evaluate.m; sourceTree = "<group>"; };
+		2A99D53317AD10ED003A50A7 /* REBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REBackgroundView.h; sourceTree = "<group>"; };
+		2A99D53417AD10ED003A50A7 /* REBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REBackgroundView.m; sourceTree = "<group>"; };
+		2A99D53517AD10ED003A50A7 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		2A99D53617AD10ED003A50A7 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		2A99D53717AD10ED003A50A7 /* RESideMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenuCell.h; sourceTree = "<group>"; };
+		2A99D53817AD10ED003A50A7 /* RESideMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenuCell.m; sourceTree = "<group>"; };
+		2A99D53917AD10ED003A50A7 /* RESideMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenuItem.h; sourceTree = "<group>"; };
+		2A99D53A17AD10ED003A50A7 /* RESideMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenuItem.m; sourceTree = "<group>"; };
+		2A99D53B17AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+RESideMenuExtensions.h"; sourceTree = "<group>"; };
+		2A99D53C17AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+RESideMenuExtensions.m"; sourceTree = "<group>"; };
+		2A99D54417AD111A003A50A7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		2A99D54517AD114C003A50A7 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		2A99D54617AD114C003A50A7 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		2A99D54917AD1208003A50A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A99D54A17AD1208003A50A7 /* QuartzCore.framework in Frameworks */,
 				219A619017AD027D002C657B /* SystemConfiguration.framework in Frameworks */,
 				219A613917ACF6E6002C657B /* UIKit.framework in Frameworks */,
 				219A613B17ACF6E6002C657B /* Foundation.framework in Frameworks */,
@@ -109,6 +137,7 @@
 		219A612C17ACF6E6002C657B = {
 			isa = PBXGroup;
 			children = (
+				2A99D54917AD1208003A50A7 /* QuartzCore.framework */,
 				219A614017ACF6E6002C657B /* Rocket Thoughts */,
 				219A613717ACF6E6002C657B /* Frameworks */,
 				219A613617ACF6E6002C657B /* Products */,
@@ -138,16 +167,10 @@
 		219A614017ACF6E6002C657B /* Rocket Thoughts */ = {
 			isa = PBXGroup;
 			children = (
+				2A99D52C17AD10CC003A50A7 /* Core */,
+				2A99D54717AD118D003A50A7 /* Controller */,
+				2A99D52D17AD10DB003A50A7 /* Animtaion */,
 				219A616617AD0132002C657B /* CommonClasses */,
-				219A614917ACF6E6002C657B /* AppDelegate.h */,
-				219A614A17ACF6E6002C657B /* AppDelegate.m */,
-				219A615217ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld */,
-				219A615A17ACF7B7002C657B /* LoginViewController.h */,
-				219A615B17ACF7B7002C657B /* LoginViewController.m */,
-				219A615C17ACF7B7002C657B /* LoginViewController.xib */,
-				219A615F17ACFF07002C657B /* ThoughtsListViewController.h */,
-				219A616017ACFF07002C657B /* ThoughtsListViewController.m */,
-				219A616117ACFF07002C657B /* ThoughtsListViewController.xib */,
 				219A614117ACF6E6002C657B /* Supporting Files */,
 			);
 			path = "Rocket Thoughts";
@@ -233,6 +256,61 @@
 			name = "Progress Indicator";
 			sourceTree = "<group>";
 		};
+		2A99D52C17AD10CC003A50A7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2A99D54417AD111A003A50A7 /* Constants.h */,
+				219A614917ACF6E6002C657B /* AppDelegate.h */,
+				219A614A17ACF6E6002C657B /* AppDelegate.m */,
+				219A615217ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		2A99D52D17AD10DB003A50A7 /* Animtaion */ = {
+			isa = PBXGroup;
+			children = (
+				2A99D52E17AD10ED003A50A7 /* RESideMenu */,
+			);
+			name = Animtaion;
+			sourceTree = "<group>";
+		};
+		2A99D52E17AD10ED003A50A7 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				2A99D52F17AD10ED003A50A7 /* AccelerationAnimation.h */,
+				2A99D53017AD10ED003A50A7 /* AccelerationAnimation.m */,
+				2A99D53117AD10ED003A50A7 /* Evaluate.h */,
+				2A99D53217AD10ED003A50A7 /* Evaluate.m */,
+				2A99D53317AD10ED003A50A7 /* REBackgroundView.h */,
+				2A99D53417AD10ED003A50A7 /* REBackgroundView.m */,
+				2A99D53517AD10ED003A50A7 /* RESideMenu.h */,
+				2A99D53617AD10ED003A50A7 /* RESideMenu.m */,
+				2A99D53717AD10ED003A50A7 /* RESideMenuCell.h */,
+				2A99D53817AD10ED003A50A7 /* RESideMenuCell.m */,
+				2A99D53917AD10ED003A50A7 /* RESideMenuItem.h */,
+				2A99D53A17AD10ED003A50A7 /* RESideMenuItem.m */,
+				2A99D53B17AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.h */,
+				2A99D53C17AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.m */,
+			);
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
+		2A99D54717AD118D003A50A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A99D54517AD114C003A50A7 /* RootViewController.h */,
+				2A99D54617AD114C003A50A7 /* RootViewController.m */,
+				219A615A17ACF7B7002C657B /* LoginViewController.h */,
+				219A615B17ACF7B7002C657B /* LoginViewController.m */,
+				219A615C17ACF7B7002C657B /* LoginViewController.xib */,
+				219A615F17ACFF07002C657B /* ThoughtsListViewController.h */,
+				219A616017ACFF07002C657B /* ThoughtsListViewController.m */,
+				219A616117ACFF07002C657B /* ThoughtsListViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A99D54817AD11CA003A50A7 /* RootViewController.m in Sources */,
 				219A614717ACF6E6002C657B /* main.m in Sources */,
 				219A614B17ACF6E6002C657B /* AppDelegate.m in Sources */,
 				219A615417ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld in Sources */,
@@ -318,6 +397,13 @@
 				219A618A17AD01BB002C657B /* Reachability.m in Sources */,
 				219A619417AD02E0002C657B /* WebserviceHelperClass.m in Sources */,
 				219A619817AD034F002C657B /* MBProgressHUD.m in Sources */,
+				2A99D53D17AD10ED003A50A7 /* AccelerationAnimation.m in Sources */,
+				2A99D53E17AD10ED003A50A7 /* Evaluate.m in Sources */,
+				2A99D53F17AD10ED003A50A7 /* REBackgroundView.m in Sources */,
+				2A99D54017AD10ED003A50A7 /* RESideMenu.m in Sources */,
+				2A99D54117AD10ED003A50A7 /* RESideMenuCell.m in Sources */,
+				2A99D54217AD10ED003A50A7 /* RESideMenuItem.m in Sources */,
+				2A99D54317AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

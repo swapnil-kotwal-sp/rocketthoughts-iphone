@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "ThoughtsListViewController.h"
 @interface LoginViewController ()
 
 @end
@@ -41,6 +41,9 @@
 
 #pragma mark - Actions
 -(IBAction)buttonSubmit:(id)sender {
+    ThoughtsListViewController *listView = [[ThoughtsListViewController alloc]initWithNibName:@"ThoughtsListViewController" bundle:nil];
+    [self.navigationController pushViewController:listView animated:YES];
+    
     WebserviceHelperClass *helperClass = [[WebserviceHelperClass alloc] init];
     helperClass.showLoadingView = YES;
     helperClass.delegate = self;
