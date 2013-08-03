@@ -37,6 +37,8 @@
 		219A619417AD02E0002C657B /* WebserviceHelperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A619317AD02E0002C657B /* WebserviceHelperClass.m */; };
 		219A619817AD034F002C657B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A619717AD034F002C657B /* MBProgressHUD.m */; };
 		219A619A17AD1AFE002C657B /* ThoughtListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219A619917AD1AFE002C657B /* ThoughtListTableCell.xib */; };
+		219A619F17AD20B5002C657B /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A619E17AD20B5002C657B /* DBHelper.m */; };
+		219A61A217AD2164002C657B /* ThoughtsDBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A61A117AD2164002C657B /* ThoughtsDBAdapter.m */; };
 		2A99D53D17AD10ED003A50A7 /* AccelerationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53017AD10ED003A50A7 /* AccelerationAnimation.m */; };
 		2A99D53E17AD10ED003A50A7 /* Evaluate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53217AD10ED003A50A7 /* Evaluate.m */; };
 		2A99D53F17AD10ED003A50A7 /* REBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53417AD10ED003A50A7 /* REBackgroundView.m */; };
@@ -103,6 +105,10 @@
 		219A619617AD034F002C657B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		219A619717AD034F002C657B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		219A619917AD1AFE002C657B /* ThoughtListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThoughtListTableCell.xib; sourceTree = "<group>"; };
+		219A619D17AD20B4002C657B /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
+		219A619E17AD20B5002C657B /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		219A61A017AD2164002C657B /* ThoughtsDBAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThoughtsDBAdapter.h; sourceTree = "<group>"; };
+		219A61A117AD2164002C657B /* ThoughtsDBAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThoughtsDBAdapter.m; sourceTree = "<group>"; };
 		2A99D52F17AD10ED003A50A7 /* AccelerationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerationAnimation.h; sourceTree = "<group>"; };
 		2A99D53017AD10ED003A50A7 /* AccelerationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerationAnimation.m; sourceTree = "<group>"; };
 		2A99D53117AD10ED003A50A7 /* Evaluate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluate.h; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				2A99D54B17AD16AB003A50A7 /* Resources */,
+				219A619B17AD2099002C657B /* Database */,
 				2A99D52C17AD10CC003A50A7 /* Core */,
 				2A99D54717AD118D003A50A7 /* Controller */,
 				2A99D52D17AD10DB003A50A7 /* Animtaion */,
@@ -266,6 +273,25 @@
 				219A619717AD034F002C657B /* MBProgressHUD.m */,
 			);
 			name = "Progress Indicator";
+			sourceTree = "<group>";
+		};
+		219A619B17AD2099002C657B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				219A619C17AD20A7002C657B /* DatabaseHelper */,
+				219A61A017AD2164002C657B /* ThoughtsDBAdapter.h */,
+				219A61A117AD2164002C657B /* ThoughtsDBAdapter.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		219A619C17AD20A7002C657B /* DatabaseHelper */ = {
+			isa = PBXGroup;
+			children = (
+				219A619D17AD20B4002C657B /* DBHelper.h */,
+				219A619E17AD20B5002C657B /* DBHelper.m */,
+			);
+			name = DatabaseHelper;
 			sourceTree = "<group>";
 		};
 		2A99D52C17AD10CC003A50A7 /* Core */ = {
@@ -442,6 +468,8 @@
 				2A99D54217AD10ED003A50A7 /* RESideMenuItem.m in Sources */,
 				2A99D54317AD10ED003A50A7 /* UIWindow+RESideMenuExtensions.m in Sources */,
 				2A99D55417AD1B34003A50A7 /* CategoryViewController.m in Sources */,
+				219A619F17AD20B5002C657B /* DBHelper.m in Sources */,
+				219A61A217AD2164002C657B /* ThoughtsDBAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
