@@ -18,6 +18,8 @@
 		219A614F17ACF6E6002C657B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 219A614E17ACF6E6002C657B /* Default@2x.png */; };
 		219A615117ACF6E6002C657B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 219A615017ACF6E6002C657B /* Default-568h@2x.png */; };
 		219A615417ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 219A615217ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld */; };
+		219A615D17ACF7B7002C657B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A615B17ACF7B7002C657B /* LoginViewController.m */; };
+		219A615E17ACF7B7002C657B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219A615C17ACF7B7002C657B /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		219A614E17ACF6E6002C657B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		219A615017ACF6E6002C657B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		219A615317ACF6E6002C657B /* Rocket_Thoughts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rocket_Thoughts.xcdatamodel; sourceTree = "<group>"; };
+		219A615A17ACF7B7002C657B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		219A615B17ACF7B7002C657B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		219A615C17ACF7B7002C657B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,9 @@
 				219A614A17ACF6E6002C657B /* AppDelegate.m */,
 				219A615217ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld */,
 				219A614117ACF6E6002C657B /* Supporting Files */,
+				219A615A17ACF7B7002C657B /* LoginViewController.h */,
+				219A615B17ACF7B7002C657B /* LoginViewController.m */,
+				219A615C17ACF7B7002C657B /* LoginViewController.xib */,
 			);
 			path = "Rocket Thoughts";
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 				219A614D17ACF6E6002C657B /* Default.png in Resources */,
 				219A614F17ACF6E6002C657B /* Default@2x.png in Resources */,
 				219A615117ACF6E6002C657B /* Default-568h@2x.png in Resources */,
+				219A615E17ACF7B7002C657B /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +183,7 @@
 				219A614717ACF6E6002C657B /* main.m in Sources */,
 				219A614B17ACF6E6002C657B /* AppDelegate.m in Sources */,
 				219A615417ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld in Sources */,
+				219A615D17ACF7B7002C657B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
