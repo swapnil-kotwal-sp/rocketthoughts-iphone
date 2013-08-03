@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ThoughtsListViewController : RootViewController <UITableViewDelegate, UITableViewDataSource> {
-    
+    IBOutlet UITableView *tableViewThoughts;
+    IBOutlet UITableViewCell *tableViewCellThought;
+    IBOutlet UIImageView *cellImageViewThought;
+    IBOutlet UILabel *cellLabelThoughtName;
+    IBOutlet UILabel *cellLabelThoughtDescription;
 }
 
 @end
