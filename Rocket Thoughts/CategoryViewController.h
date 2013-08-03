@@ -10,4 +10,6 @@
 
 @interface CategoryViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,WebserviceDelegate>
 
+@property (nonatomic,retain) NSMutableArray *arrCategory;
+@property (nonatomic,retain) IBOutlet UITableView *tblCategory;
 @end

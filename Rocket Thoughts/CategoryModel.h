@@ -31,17 +31,17 @@
 
 @interface ModelCategory : NSObject
 {
-    NSNumber * Id;
+    NSNumber * category_id;
     NSString * Slug;
-    NSString * Title;
+    NSString * name;
     NSString * Description;
     NSNumber * Parent;
     NSNumber * Post_count;
 }
 
-@property(nonatomic,retain) NSNumber * Id;
+@property(nonatomic,retain) NSNumber * category_id;
 @property(nonatomic,retain) NSString * Slug;
-@property(nonatomic,retain) NSString * Title;
+@property(nonatomic,retain) NSString * name;
 @property(nonatomic,retain) NSString * Description;
 @property(nonatomic,retain) NSNumber * Parent;
 @property(nonatomic,retain) NSNumber * Post_count;

@@ -40,14 +40,15 @@
     return self;
 }
 
+
 @end
 
 
 @implementation ModelCategory
 
-@synthesize Id;
+@synthesize category_id;
 @synthesize Slug;
-@synthesize Title;
+@synthesize name;
 @synthesize Description;
 @synthesize Parent;
 @synthesize Post_count;
@@ -64,9 +65,9 @@
     self=[super init];
     if(self)
     {
-        Id = [dictionary objectForKey:@"id"];
+        category_id = [dictionary objectForKey:@"id"];
         Slug = [dictionary objectForKey:@"slug"];
-        Title = [dictionary objectForKey:@"title"];
+        name = [dictionary objectForKey:@"title"];
         Description = [dictionary objectForKey:@"description"];
         Parent = [dictionary objectForKey:@"parent"];
         Post_count = [dictionary objectForKey:@"post_count"];

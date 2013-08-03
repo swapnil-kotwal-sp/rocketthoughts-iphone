@@ -30,16 +30,6 @@
     if (!_sideMenu) {
         
         RESideMenuItem *thoughtItem = [[RESideMenuItem alloc] initWithTitle:@"Thoughts" action:^(RESideMenu *menu, RESideMenuItem *item) {
-            
-//            NSArray *controllers = self.navigationController.viewControllers;
-//            for (id controller in controllers) {
-//                // iterate through the array and check for your controller
-//                if ([controller isKindOfClass:[ThoughtsListViewController class]])
-//                {
-//                    [self.navigationController popViewControllerAnimated:YES];
-//                }
-//            }
-
             [menu hide];
             ThoughtsListViewController *thought = [[ThoughtsListViewController alloc]initWithNibName:@"ThoughtsListViewController" bundle:nil];
             [self.navigationController pushViewController:thought animated:YES];

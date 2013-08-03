@@ -7,7 +7,7 @@
 //
 
 #import "CategoryDBAdapter.h"
-
+#import "CategoryModel.h"
 @implementation CategoryDBAdapter
 
 - (id)init:(NSManagedObjectContext *)managedContext
@@ -26,13 +26,26 @@
     dbName = @"Categories";
 }
 
+
 -(void)setDbColumns {
-    dbColumns = [NSArray arrayWithObjects:@"id",@"name",nil];
+    dbColumns = [NSArray arrayWithObjects:@"category_id",@"name",nil];
 }
+
 
 -(void)createRecord: (NSArray*)objects {
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:dbColumns];
     [super insertIntoTable:dictionary];
 }
 
+- (NSArray *)getCategoryName {
+    NSArray *category = [super fetchAll];
+    NSMutableArray *categoriesList = [NSMutableArray new] ;
+    for(int i=0;i<[category count];i++) {
+        ModelCategory *result = [ModelCategory new];
+        result.category_id = [(NSManagedObject *)[category objectAtIndex:i] valueForKey:@"category_id"];
+        result.name = [(NSManagedObject *)[category objectAtIndex:i] valueForKey:@"name"];
+        [categoriesList addObject:result];
+    }
+    return categoriesList;
+}
 @end

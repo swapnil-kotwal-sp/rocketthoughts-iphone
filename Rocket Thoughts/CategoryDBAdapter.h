@@ -9,5 +9,7 @@
 #import "DBHelper.h"
 
 @interface CategoryDBAdapter : DBHelper
-
+- (id)init:(NSManagedObjectContext *)managedContext;
+-(void)createRecord: (NSArray*)objects;
+- (NSArray *)getCategoryName ;
 @end
