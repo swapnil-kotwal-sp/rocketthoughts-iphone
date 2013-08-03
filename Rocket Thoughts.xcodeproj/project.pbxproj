@@ -52,6 +52,9 @@
 		2A99D55017AD18E1003A50A7 /* images-8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2A99D54F17AD18E1003A50A7 /* images-8.jpeg */; };
 		2A99D55417AD1B34003A50A7 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D55217AD1B33003A50A7 /* CategoryViewController.m */; };
 		2A99D55517AD1B34003A50A7 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A99D55317AD1B34003A50A7 /* CategoryViewController.xib */; };
+		2A99D55717AD26D5003A50A7 /* images-7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2A99D55617AD26D5003A50A7 /* images-7.jpeg */; };
+		2A99D55A17AD2FE5003A50A7 /* CategoryDBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D55917AD2FE5003A50A7 /* CategoryDBAdapter.m */; };
+		2A99D55E17AD3199003A50A7 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D55D17AD3199003A50A7 /* CategoryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +135,11 @@
 		2A99D55117AD1B33003A50A7 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		2A99D55217AD1B33003A50A7 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		2A99D55317AD1B34003A50A7 /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		2A99D55617AD26D5003A50A7 /* images-7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-7.jpeg"; sourceTree = "<group>"; };
+		2A99D55817AD2FE5003A50A7 /* CategoryDBAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDBAdapter.h; sourceTree = "<group>"; };
+		2A99D55917AD2FE5003A50A7 /* CategoryDBAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDBAdapter.m; sourceTree = "<group>"; };
+		2A99D55C17AD3199003A50A7 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		2A99D55D17AD3199003A50A7 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +192,7 @@
 		219A614017ACF6E6002C657B /* Rocket Thoughts */ = {
 			isa = PBXGroup;
 			children = (
+				2A99D55B17AD316A003A50A7 /* Model */,
 				2A99D54B17AD16AB003A50A7 /* Resources */,
 				219A619B17AD2099002C657B /* Database */,
 				2A99D52C17AD10CC003A50A7 /* Core */,
@@ -279,6 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				219A619C17AD20A7002C657B /* DatabaseHelper */,
+				2A99D55817AD2FE5003A50A7 /* CategoryDBAdapter.h */,
+				2A99D55917AD2FE5003A50A7 /* CategoryDBAdapter.m */,
 				219A61A017AD2164002C657B /* ThoughtsDBAdapter.h */,
 				219A61A117AD2164002C657B /* ThoughtsDBAdapter.m */,
 			);
@@ -366,8 +377,18 @@
 			children = (
 				2A99D54D17AD18AC003A50A7 /* images-9.jpeg */,
 				2A99D54F17AD18E1003A50A7 /* images-8.jpeg */,
+				2A99D55617AD26D5003A50A7 /* images-7.jpeg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		2A99D55B17AD316A003A50A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A99D55C17AD3199003A50A7 /* CategoryModel.h */,
+				2A99D55D17AD3199003A50A7 /* CategoryModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +452,7 @@
 				2A99D55017AD18E1003A50A7 /* images-8.jpeg in Resources */,
 				2A99D55517AD1B34003A50A7 /* CategoryViewController.xib in Resources */,
 				219A619A17AD1AFE002C657B /* ThoughtListTableCell.xib in Resources */,
+				2A99D55717AD26D5003A50A7 /* images-7.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +492,8 @@
 				2A99D55417AD1B34003A50A7 /* CategoryViewController.m in Sources */,
 				219A619F17AD20B5002C657B /* DBHelper.m in Sources */,
 				219A61A217AD2164002C657B /* ThoughtsDBAdapter.m in Sources */,
+				2A99D55A17AD2FE5003A50A7 /* CategoryDBAdapter.m in Sources */,
+				2A99D55E17AD3199003A50A7 /* CategoryModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

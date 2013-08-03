@@ -166,4 +166,19 @@
 }
 
 
+//#pragma mark - Navigation Stack check
+//
+//+ (BOOL)PresenceOfViewInNavigation:(UIViewController *)viewController {
+//    NSArray *controllerArray = self.navigationController.viewControllers;
+//    //will get all the controllers added to UINavigationController.
+//
+//    for (id controller in controllerArray)
+//    {
+//        // iterate through the array and check for your controller
+//        if ([controller isKindOfClass:[checkYourController class]])
+//        {
+//            //do your stuff here
+//        }
+//    }
+//}
 @end

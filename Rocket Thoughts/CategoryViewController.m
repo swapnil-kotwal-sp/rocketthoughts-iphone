@@ -7,6 +7,8 @@
 //
 
 #import "CategoryViewController.h"
+#import "CategoryModel.h"
+#import "CategoryDBAdapter.h"
 
 @interface CategoryViewController ()
 
@@ -34,6 +36,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationItem.hidesBackButton = YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -57,6 +63,9 @@
 
 - (void)apiCallResponse:(id)response andServiceTag:(int)tag {
     NSLog(@"this is list of category-->%@",response);
+    CategoryModel *category = [[CategoryModel alloc] initWithDictionary:(NSDictionary *)response];
+
+    
 }
 
 

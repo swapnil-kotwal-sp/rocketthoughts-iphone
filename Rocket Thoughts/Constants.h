@@ -11,6 +11,7 @@
 #endif
 
 #define IS_WIDESCREEN       (fabs((double)[[UIScreen mainScreen]bounds].size.height - (double)568) < DBL_EPSILON)
+#define APPDLEGATE          ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 #define BASE_URL            @"http://rocketthoughts-sdemo.rhcloud.com/"
 #define GET_CATEGORY        BASE_URL  @"?json=get_category_index"
