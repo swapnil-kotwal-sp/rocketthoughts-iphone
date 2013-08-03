@@ -21,7 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-   
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
     sleep(3);
     LoginViewController *loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
     self.navigationController = [[UINavigationController alloc]initWithRootViewController:loginViewController];
@@ -182,4 +182,24 @@
 //        }
 //    }
 //}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+    NSString *deviceTokenStr = [[[[deviceToken description]
+                                  stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                                 stringByReplacingOccurrencesOfString: @">" withString: @""]
+                                stringByReplacingOccurrencesOfString: @" " withString: @"%20"];
+    
+    NSLog(@"Device Token: %@", deviceTokenStr);
+    [[NSUserDefaults standardUserDefaults] setValue:deviceTokenStr forKey:@"device_token"];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+	//NSLog(@"Failed to get token, error: %@", error);
+}
+
 @end

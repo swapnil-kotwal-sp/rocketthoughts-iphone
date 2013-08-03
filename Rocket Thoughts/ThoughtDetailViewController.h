@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ThoughtsModel.h"
+#import "AsyncImageView.h"
 
 @interface ThoughtDetailViewController : UIViewController {
     IBOutlet UILabel *labelThoughtTitle;
     IBOutlet UILabel *labelThoughtDescription;
-    IBOutlet UIImageView *imageViewThought;
+    IBOutlet AsyncImageView *imageViewThought;
+    IBOutlet UIScrollView *scrollView;
 }
+@property (nonatomic, retain) ThoughtsModel *thoughtsModel;
 
 @end

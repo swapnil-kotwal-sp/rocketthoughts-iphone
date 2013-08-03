@@ -19,4 +19,7 @@
 @property (nonatomic, retain) NSString *obj_thought_description;
 @property (nonatomic, retain) NSString *obj_created_at;
 
++(NSMutableArray *)fromJson:(NSDictionary *)dictionry;
++(NSString *) stringByStrippingHTML : (NSString *)htmlString;
+
 @end

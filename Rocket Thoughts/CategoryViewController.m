@@ -9,14 +9,14 @@
 #import "CategoryViewController.h"
 #import "CategoryModel.h"
 #import "CategoryDBAdapter.h"
-
+#import "ThoughtsListViewController.h"
 
 @interface CategoryViewController ()
 
 @end
 
 @implementation CategoryViewController
-@synthesize arrCategory,tblCategory;
+@synthesize arrCategory,tblCategory,arrayCategoryList;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    arrayCategoryList = [[NSMutableArray alloc] init];
     NSArray *controllers = self.navigationController.viewControllers;
     NSLog(@"this is controller-->%@",controllers);
     arrCategory = [NSMutableArray new];
@@ -57,15 +57,12 @@
     return [arrCategory count];
 }
 
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
-        cell.textLabel.textColor = [UIColor whiteColor];
     }
         cell.textLabel.text = [arrCategory objectAtIndex:indexPath.row]; // only top row showing
         //cell.imageView.image = [UIImage imageNamed:@"timings-icon"];
@@ -73,6 +70,13 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ModelCategory *categoryModel = [arrayCategoryList objectAtIndex:indexPath.row];
+    ThoughtsListViewController *thoughtsListViewController = [[ThoughtsListViewController alloc] initWithNibName:@"ThoughtsListViewController" bundle:nil];
+    thoughtsListViewController.categoryId = [categoryModel.category_id intValue];
+    thoughtsListViewController.isFromCategory = YES;
+    [self.navigationController pushViewController:thoughtsListViewController animated:YES];
+}
 
 #pragma mark - Webservice Delegate
 
@@ -80,9 +84,9 @@
     NSLog(@"this is list of category-->%@",response);
     CategoryDBAdapter *adapter = [[CategoryDBAdapter alloc] init:APPDLEGATE.managedObjectContext];
     CategoryModel *model= [[CategoryModel alloc]initWithDictionary:(NSDictionary *)response];
-    NSArray *arrModel = model.Categories;
+    arrayCategoryList = model.Categories;
        [adapter deleteAll];
-    for (ModelCategory *model in arrModel) {
+    for (ModelCategory *model in arrayCategoryList) {
         [adapter createRecord:[NSArray arrayWithObjects:model.category_id,model.name,nil]];
     }
     NSArray * arr = [adapter getCategoryName];

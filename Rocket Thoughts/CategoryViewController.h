@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CategoryViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,WebserviceDelegate>
+@interface CategoryViewController : RootViewController <UITableViewDelegate,UITableViewDataSource,WebserviceDelegate>
 
 @property (nonatomic,retain) NSMutableArray *arrCategory;
+@property (nonatomic,retain) NSMutableArray *arrayCategoryList;
 @property (nonatomic,retain) IBOutlet UITableView *tblCategory;
 @end

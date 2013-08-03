@@ -16,4 +16,6 @@
 #define BASE_URL            @"http://rocketthoughts-sdemo.rhcloud.com/"
 #define GET_CATEGORY        BASE_URL  @"?json=get_category_index"
 #define GET_THOUGHTS        BASE_URL  @"?json=get_recent_posts&count=20"
-#define SEARCH_THOUGHTS     BASE_URL  @"http://rocketthoughts-sdemo.rhcloud.com/?json=get_search_results&count=20"
+#define SEARCH_THOUGHTS     BASE_URL  @"?json=get_search_results&count=20"
+#define GET_CATEGORY_THOUGHTS BASE_URL @"?json=get_category_posts&count=20&post_type=post"
+#define PUSH_NOTIFICATION_URL @"https://api.pushover.net/1/users/validate.json"

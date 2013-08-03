@@ -8,12 +8,14 @@
 
 #import "ThoughtsListViewController.h"
 #import "ThoughtDetailViewController.h"
+#import "ThoughtsModel.h"
 
 @interface ThoughtsListViewController ()
 
 @end
 
 @implementation ThoughtsListViewController
+@synthesize isFromCategory,categoryId;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,26 +31,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"rocket_bg.png"]];
+    //Adding image to navigationbar background
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:34/255.0 green:62/255.0 blue:101/255.0 alpha:1.0];
+    
+    helperClass = [[WebserviceHelperClass alloc] init];
+    helperClass.showLoadingView = YES;
+    helperClass.delegate = self;
     arrayThoughts = [[NSMutableArray alloc] init];
-    [self loadThoughts:@"1"];
+    if (isFromCategory) {
+        [self loadCategoryThoughts:@"1"];
+    } else {
+        [self loadThoughts:@"1"];
+    }
+    
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)loadThoughts:(NSString *)pageNumber {
-    WebserviceHelperClass *helperClass = [[WebserviceHelperClass alloc] init];
-    helperClass.showLoadingView = YES;
-    helperClass.loadingViewText = @"Loading thoughts..";
-    helperClass.delegate = self;
+-(void)loadThoughts:(NSString *)pageNumber {    
+    helperClass.loadingViewText = @"Loading thoughts..";    
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
     [dictionary setObject:pageNumber forKey:@"page"];
     [helperClass callWebServiceForGETRequest:GET_THOUGHTS withParameters:dictionary withServiceTag:0];
 }
 
--(void)searchThoughts:(NSString *)searchString withPageNumber:(NSString *)pageNumber {
-    WebserviceHelperClass *helperClass = [[WebserviceHelperClass alloc] init];
+-(void)loadCategoryThoughts:(NSString *)pageNumber {
     helperClass.showLoadingView = YES;
     helperClass.loadingViewText = @"Loading thoughts..";
-    helperClass.delegate = self;
+    NSString *cat_id = [NSString stringWithFormat:@"%d",categoryId];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    [dictionary setObject:cat_id forKey:@"category_id"];
+    [dictionary setObject:pageNumber forKey:@"page"];
+    NSString *urlString = [GET_CATEGORY_THOUGHTS stringByAppendingString:[NSString stringWithFormat:@"&category_id=%@",cat_id]];
+    
+    [helperClass callWebServiceForGETRequest:urlString withParameters:dictionary withServiceTag:2];
+}
+
+-(void)searchThoughts:(NSString *)searchString withPageNumber:(NSString *)pageNumber {
+    helperClass.showLoadingView = YES;
+    helperClass.loadingViewText = @"Loading thoughts..";
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
     [dictionary setObject:pageNumber forKey:@"page"];
     [dictionary setObject:searchString forKey:@"search"];
@@ -70,11 +91,24 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    UITableViewCell *cell = [tableViewThoughts dequeueReusableCellWithIdentifier:@"thoughTableCellIdentifer"];
+    if ( cell == nil ) {
+            ThoughtsModel *thoughtsModel = [arrayThoughts objectAtIndex:indexPath.row];
+            [[NSBundle mainBundle] loadNibNamed:@"ThoughtListTableCell" owner:self options:nil];
+            cell = tableViewCellThought;
+            cellLabelThoughtDescription.text = thoughtsModel.obj_thought_description;
+            cellLabelThoughtName.text = thoughtsModel.obj_name;
+        if (thoughtsModel.obj_thumbnail != nil) {
+            cellImageViewThought.imageURL = [NSURL URLWithString:thoughtsModel.obj_thumbnail];
+        }
+            tableViewCellThought = nil;
+    }
+    return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ThoughtDetailViewController *thoughtDetailViewController = [[ThoughtDetailViewController alloc] initWithNibName:@"ThoughtDetailViewController" bundle:nil];
+    thoughtDetailViewController.thoughtsModel = [arrayThoughts objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:thoughtDetailViewController animated:YES];
 }
 
@@ -105,10 +139,18 @@
     switch (tag) {
         case 0:
              NSLog(@"Thought Response: %@",response);
+            arrayThoughts = [ThoughtsModel fromJson:response];
+            [tableViewThoughts reloadData];
             break;
         
         case 1:
              NSLog(@"Search Thought Response: %@",response);
+            break;
+            
+        case 2:
+            arrayThoughts = [ThoughtsModel fromJson:response];
+            [tableViewThoughts reloadData];
+            NSLog(@"Category Thought Response: %@",response);
             break;
             
         default:

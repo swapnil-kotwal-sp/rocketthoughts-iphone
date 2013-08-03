@@ -9,7 +9,8 @@
 #import "RootViewController.h"
 #import "ThoughtsListViewController.h"
 #import "CategoryViewController.h"
-
+#import "AboutViewController.h"
+#import "SettingsViewController.h"
 
 @interface RootViewController ()
 
@@ -36,7 +37,9 @@
         }];
         
         RESideMenuItem *settingItem = [[RESideMenuItem alloc] initWithTitle:@"Settings" action:^(RESideMenu *menu, RESideMenuItem *item) {
-
+            [menu hide];
+            SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+            [self.navigationController pushViewController:settingsViewController animated:YES];
         }];
         
         RESideMenuItem *categoryItem = [[RESideMenuItem alloc] initWithTitle:@"Categories" action:^(RESideMenu *menu, RESideMenuItem *item) {
@@ -46,11 +49,15 @@
         }];
         
         RESideMenuItem *aboutUsItem = [[RESideMenuItem alloc] initWithTitle:@"About Us" action:^(RESideMenu *menu, RESideMenuItem *item) {
-        
+            [menu hide];
+            AboutViewController *aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+            [self.navigationController pushViewController:aboutViewController animated:YES];
         }];
         
         RESideMenuItem *conatctItem = [[RESideMenuItem alloc] initWithTitle:@"Contact" action:^(RESideMenu *menu, RESideMenuItem *item) {
-        
+            [menu hide];
+            AboutViewController *aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+            [self.navigationController pushViewController:aboutViewController animated:YES];
         }];
         
         _sideMenu = [[RESideMenu alloc] initWithItems:@[thoughtItem, settingItem, categoryItem, aboutUsItem,conatctItem]];

@@ -45,19 +45,30 @@
 }
 
 #pragma mark - Actions
--(IBAction)buttonSubmit:(id)sender {
-    ThoughtsListViewController *listView = [[ThoughtsListViewController alloc]initWithNibName:@"ThoughtsListViewController" bundle:nil];
-    [self.navigationController pushViewController:listView animated:YES];
+-(IBAction)buttonSubmit:(id)sender {   
     
     WebserviceHelperClass *helperClass = [[WebserviceHelperClass alloc] init];
-    helperClass.showLoadingView = YES;
+    helperClass.showLoadingView = NO;
     helperClass.delegate = self;
-    [helperClass callWebServiceForPOSTRequest:@"" withParameters:nil withServiceTag:0];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    [dictionary setValue:@"REXKkBQp8sHVvS9cYu54VghKsP9SHR" forKey:@"token"];
+    [dictionary setValue:[[NSUserDefaults standardUserDefaults] valueForKey:@"device_token"] forKey:@"user"];
+    
+    NSString *urlString = [PUSH_NOTIFICATION_URL stringByAppendingString:[NSString stringWithFormat:@"&token=REXKkBQp8sHVvS9cYu54VghKsP9SHR&user=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"device_token"]]];
+    NSLog(@"URL:%@",urlString);
+    [helperClass callWebServiceForPOSTRequest:urlString withParameters:nil withServiceTag:0];
+    if (![textEmail.text isEqualToString:@""] && ![textUserName.text isEqualToString:@""]) {
+        ThoughtsListViewController *listView = [[ThoughtsListViewController alloc]initWithNibName:@"ThoughtsListViewController" bundle:nil];
+        [self.navigationController pushViewController:listView animated:YES];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter user name and email id" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 #pragma mark - Webservice Delegate methods
 -(void) apiCallResponse:(id)response andServiceTag:(int)tag {
-    
+    NSLog(@"Response: %@",response);
 }
 
 -(void) apiCallError:(NSError *)error andServiceTag:(int)tag {
