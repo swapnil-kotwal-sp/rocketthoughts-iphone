@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebserviceHelperClass.h"
 
-@interface ThoughtsListViewController : RootViewController <UITableViewDelegate, UITableViewDataSource> {
+@interface ThoughtsListViewController : RootViewController <UITableViewDelegate, UITableViewDataSource,WebserviceDelegate,UISearchBarDelegate> {
     IBOutlet UITableView *tableViewThoughts;
     IBOutlet UITableViewCell *tableViewCellThought;
     IBOutlet UIImageView *cellImageViewThought;
     IBOutlet UILabel *cellLabelThoughtName;
     IBOutlet UILabel *cellLabelThoughtDescription;
+    IBOutlet UISearchBar *searchBarThoughts;
+    NSMutableArray *arrayThoughts;
 }
 
 @end

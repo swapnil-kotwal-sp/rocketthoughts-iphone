@@ -20,7 +20,6 @@
 		219A615417ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 219A615217ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld */; };
 		219A615D17ACF7B7002C657B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A615B17ACF7B7002C657B /* LoginViewController.m */; };
 		219A615E17ACF7B7002C657B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219A615C17ACF7B7002C657B /* LoginViewController.xib */; };
-		219A616217ACFF07002C657B /* ThoughtsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A616017ACFF07002C657B /* ThoughtsListViewController.m */; };
 		219A616317ACFF07002C657B /* ThoughtsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219A616117ACFF07002C657B /* ThoughtsListViewController.xib */; };
 		219A617B17AD0182002C657B /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A616917AD0182002C657B /* AFHTTPClient.m */; };
 		219A617C17AD0182002C657B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A616B17AD0182002C657B /* AFHTTPRequestOperation.m */; };
@@ -39,6 +38,10 @@
 		219A619A17AD1AFE002C657B /* ThoughtListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219A619917AD1AFE002C657B /* ThoughtListTableCell.xib */; };
 		219A619F17AD20B5002C657B /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A619E17AD20B5002C657B /* DBHelper.m */; };
 		219A61A217AD2164002C657B /* ThoughtsDBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A61A117AD2164002C657B /* ThoughtsDBAdapter.m */; };
+		219A61B217AD6466002C657B /* ThoughtDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A61B017AD6466002C657B /* ThoughtDetailViewController.m */; };
+		219A61B317AD6466002C657B /* ThoughtDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219A61B117AD6466002C657B /* ThoughtDetailViewController.xib */; };
+		219A61B617AD6487002C657B /* ThoughtsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A61B517AD6487002C657B /* ThoughtsListViewController.m */; };
+		219A61B917AD6493002C657B /* ThoughtsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 219A61B817AD6493002C657B /* ThoughtsModel.m */; };
 		2A99D53D17AD10ED003A50A7 /* AccelerationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53017AD10ED003A50A7 /* AccelerationAnimation.m */; };
 		2A99D53E17AD10ED003A50A7 /* Evaluate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53217AD10ED003A50A7 /* Evaluate.m */; };
 		2A99D53F17AD10ED003A50A7 /* REBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D53417AD10ED003A50A7 /* REBackgroundView.m */; };
@@ -77,8 +80,6 @@
 		219A615A17ACF7B7002C657B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		219A615B17ACF7B7002C657B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		219A615C17ACF7B7002C657B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		219A615F17ACFF07002C657B /* ThoughtsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThoughtsListViewController.h; sourceTree = "<group>"; };
-		219A616017ACFF07002C657B /* ThoughtsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThoughtsListViewController.m; sourceTree = "<group>"; };
 		219A616117ACFF07002C657B /* ThoughtsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThoughtsListViewController.xib; sourceTree = "<group>"; };
 		219A616817AD0182002C657B /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		219A616917AD0182002C657B /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -113,6 +114,13 @@
 		219A619E17AD20B5002C657B /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
 		219A61A017AD2164002C657B /* ThoughtsDBAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThoughtsDBAdapter.h; sourceTree = "<group>"; };
 		219A61A117AD2164002C657B /* ThoughtsDBAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThoughtsDBAdapter.m; sourceTree = "<group>"; };
+		219A61AF17AD6466002C657B /* ThoughtDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThoughtDetailViewController.h; sourceTree = "<group>"; };
+		219A61B017AD6466002C657B /* ThoughtDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThoughtDetailViewController.m; sourceTree = "<group>"; };
+		219A61B117AD6466002C657B /* ThoughtDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThoughtDetailViewController.xib; sourceTree = "<group>"; };
+		219A61B417AD6487002C657B /* ThoughtsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThoughtsListViewController.h; sourceTree = "<group>"; };
+		219A61B517AD6487002C657B /* ThoughtsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThoughtsListViewController.m; sourceTree = "<group>"; };
+		219A61B717AD6493002C657B /* ThoughtsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThoughtsModel.h; sourceTree = "<group>"; };
+		219A61B817AD6493002C657B /* ThoughtsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThoughtsModel.m; sourceTree = "<group>"; };
 		2A99D52F17AD10ED003A50A7 /* AccelerationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerationAnimation.h; sourceTree = "<group>"; };
 		2A99D53017AD10ED003A50A7 /* AccelerationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerationAnimation.m; sourceTree = "<group>"; };
 		2A99D53117AD10ED003A50A7 /* Evaluate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluate.h; sourceTree = "<group>"; };
@@ -350,13 +358,16 @@
 		2A99D54717AD118D003A50A7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				219A61AF17AD6466002C657B /* ThoughtDetailViewController.h */,
+				219A61B017AD6466002C657B /* ThoughtDetailViewController.m */,
+				219A61B117AD6466002C657B /* ThoughtDetailViewController.xib */,
 				2A99D54517AD114C003A50A7 /* RootViewController.h */,
 				2A99D54617AD114C003A50A7 /* RootViewController.m */,
 				219A615A17ACF7B7002C657B /* LoginViewController.h */,
 				219A615B17ACF7B7002C657B /* LoginViewController.m */,
 				219A615C17ACF7B7002C657B /* LoginViewController.xib */,
-				219A615F17ACFF07002C657B /* ThoughtsListViewController.h */,
-				219A616017ACFF07002C657B /* ThoughtsListViewController.m */,
+				219A61B417AD6487002C657B /* ThoughtsListViewController.h */,
+				219A61B517AD6487002C657B /* ThoughtsListViewController.m */,
 				219A616117ACFF07002C657B /* ThoughtsListViewController.xib */,
 				2A99D55117AD1B33003A50A7 /* CategoryViewController.h */,
 				2A99D55217AD1B33003A50A7 /* CategoryViewController.m */,
@@ -390,6 +401,8 @@
 			children = (
 				2A99D55C17AD3199003A50A7 /* CategoryModel.h */,
 				2A99D55D17AD3199003A50A7 /* CategoryModel.m */,
+				219A61B717AD6493002C657B /* ThoughtsModel.h */,
+				219A61B817AD6493002C657B /* ThoughtsModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -457,6 +470,7 @@
 				219A619A17AD1AFE002C657B /* ThoughtListTableCell.xib in Resources */,
 				2A99D55717AD26D5003A50A7 /* images-7.jpeg in Resources */,
 				2A99D56E17AD527B003A50A7 /* login.jpg in Resources */,
+				219A61B317AD6466002C657B /* ThoughtDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +486,6 @@
 				219A614B17ACF6E6002C657B /* AppDelegate.m in Sources */,
 				219A615417ACF6E6002C657B /* Rocket_Thoughts.xcdatamodeld in Sources */,
 				219A615D17ACF7B7002C657B /* LoginViewController.m in Sources */,
-				219A616217ACFF07002C657B /* ThoughtsListViewController.m in Sources */,
 				219A617B17AD0182002C657B /* AFHTTPClient.m in Sources */,
 				219A617C17AD0182002C657B /* AFHTTPRequestOperation.m in Sources */,
 				219A617D17AD0182002C657B /* AFImageRequestOperation.m in Sources */,
@@ -498,6 +511,9 @@
 				219A61A217AD2164002C657B /* ThoughtsDBAdapter.m in Sources */,
 				2A99D55A17AD2FE5003A50A7 /* CategoryDBAdapter.m in Sources */,
 				2A99D55E17AD3199003A50A7 /* CategoryModel.m in Sources */,
+				219A61B217AD6466002C657B /* ThoughtDetailViewController.m in Sources */,
+				219A61B617AD6487002C657B /* ThoughtsListViewController.m in Sources */,
+				219A61B917AD6493002C657B /* ThoughtsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
