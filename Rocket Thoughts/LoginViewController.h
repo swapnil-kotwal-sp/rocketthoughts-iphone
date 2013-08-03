@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebserviceHelperClass.h"
 
-@interface LoginViewController : UIViewController {
+@class WebserviceHelperClass;
+
+@interface LoginViewController : UIViewController<UITextFieldDelegate,WebserviceDelegate> {
     IBOutlet UITextField *textUserName;
     IBOutlet UITextField *textEmail;
 }

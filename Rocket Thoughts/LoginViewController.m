@@ -32,8 +32,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - TextField delegate methods
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textUserName resignFirstResponder];
+    [textEmail resignFirstResponder];
+    return YES;
+}
+
 #pragma mark - Actions
 -(IBAction)buttonSubmit:(id)sender {
+    WebserviceHelperClass *helperClass = [[WebserviceHelperClass alloc] init];
+    helperClass.showLoadingView = YES;
+    helperClass.delegate = self;
+    [helperClass callWebServiceForPOSTRequest:@"" withParameters:nil withServiceTag:0];
+}
+
+#pragma mark - Webservice Delegate methods
+-(void) apiCallResponse:(id)response andServiceTag:(int)tag {
+    
+}
+
+-(void) apiCallError:(NSError *)error andServiceTag:(int)tag {
     
 }
 
