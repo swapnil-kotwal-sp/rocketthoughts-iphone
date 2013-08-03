@@ -55,6 +55,7 @@
 		2A99D55717AD26D5003A50A7 /* images-7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2A99D55617AD26D5003A50A7 /* images-7.jpeg */; };
 		2A99D55A17AD2FE5003A50A7 /* CategoryDBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D55917AD2FE5003A50A7 /* CategoryDBAdapter.m */; };
 		2A99D55E17AD3199003A50A7 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D55D17AD3199003A50A7 /* CategoryModel.m */; };
+		2A99D56117AD3806003A50A7 /* ThoughtsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A99D56017AD3806003A50A7 /* ThoughtsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,8 @@
 		2A99D55917AD2FE5003A50A7 /* CategoryDBAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDBAdapter.m; sourceTree = "<group>"; };
 		2A99D55C17AD3199003A50A7 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
 		2A99D55D17AD3199003A50A7 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		2A99D55F17AD3806003A50A7 /* ThoughtsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThoughtsModel.h; sourceTree = "<group>"; };
+		2A99D56017AD3806003A50A7 /* ThoughtsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThoughtsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +390,8 @@
 			children = (
 				2A99D55C17AD3199003A50A7 /* CategoryModel.h */,
 				2A99D55D17AD3199003A50A7 /* CategoryModel.m */,
+				2A99D55F17AD3806003A50A7 /* ThoughtsModel.h */,
+				2A99D56017AD3806003A50A7 /* ThoughtsModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -494,6 +499,7 @@
 				219A61A217AD2164002C657B /* ThoughtsDBAdapter.m in Sources */,
 				2A99D55A17AD2FE5003A50A7 /* CategoryDBAdapter.m in Sources */,
 				2A99D55E17AD3199003A50A7 /* CategoryModel.m in Sources */,
+				2A99D56117AD3806003A50A7 /* ThoughtsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
